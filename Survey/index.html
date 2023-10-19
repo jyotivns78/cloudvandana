@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>Survey Form</h1>
+        <form id="surveyForm">
+            <div class="row flex_div">
+                <div class="input-group field">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName">
+                    <p class="error" id="errorFirstName"></p>
+                </div>
+                <div class="input-group field">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName">
+                    <p class="error" id="errorLastName"></p>
+                </div>
+            </div>
+           <div class="row flex_div ">
+            <div class="input-group field">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob">
+                <p class="error" id="errorDob"></p>
+            </div>
+            <div class="input-group field">
+                <label for="country">Country:</label>
+                <select id="country">
+                    <option value="USA">USA</option>
+                    <option value="Canada">Canada</option>
+                    <option value="UK">UK</option>
+                </select>
+                <p class="error" id="errorCountry"></p>
+            </div>
+           </div>
+        <div class="row flex_div">
+            <div class="input-group " style="display: flex !important;">
+                <label>Gender:</label>
+                <div>
+                    <input type="checkbox" id="male" name="gender" value="Male"> Male
+                <input type="checkbox" id="female" name="gender" value="Female"> Female
+                </div>
+                <p class="error" id="errorGender"></p>
+            </div>
+            <div class="input-group field">
+                <label for="profession">Profession:</label>
+                <input type="text" id="profession">
+                <p class="error" id="errorProfession"></p>
+            </div>
+        </div>
+           <div class="row flex_div">
+            <div class="input-group field">
+                <label for="email">Email:</label>
+                <input type="email" id="email">
+                <p class="error" id="errorEmail"></p>
+            </div>
+            <div class="input-group field">
+                <label for="mobile">Mobile Number (10 digits):</label>
+                <input type="tel" id="mobile">
+                <p class="error" id="errorMobile"></p>
+            </div>
+           </div>
+            <div class="input-group" style="display: flex;">
+                <div class="button_div">
+                    <button type="submit" onclick="showPopup(event)">Submit</button>
+                <button type="reset">Reset</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="popup" id="popup">
+        <h2>Survey Form Data</h2>
+        <label for="popupFirstName">First Name:</label>
+        <span id="popupFirstName"></span><br>
+
+        <label for="popupLastName">Last Name:</label>
+        <span id="popupLastName"></span><br>
+
+        <label for="popupDob">Date of Birth:</label>
+        <span id="popupDob"></span><br>
+
+        <label for="popupCountry">Country:</label>
+        <span id="popupCountry"></span><br>
+
+        <label for="popupGender">Gender:</label>
+        <span id="popupGender"></span><br>
+
+        <label for="popupProfession">Profession:</label>
+        <span id="popupProfession"></span><br>
+
+        <label for="popupEmail">Email:</label>
+        <span id="popupEmail"></span><br>
+
+        <label for="popupMobile">Mobile Number:</label>
+        <span id="popupMobile"></span><br>
+
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+  
+    <script src="script.js"></script>
+</body>
+
+</html>
