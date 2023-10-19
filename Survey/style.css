@@ -19,6 +19,10 @@ body {
     width: 60%;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .input-group {
@@ -31,6 +35,9 @@ body {
 
 .field input {
     height: 40px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
 }
 
 select {
@@ -78,5 +85,11 @@ select {
     color: #FFFFFF;
     padding: 5px 15px;
     border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        min-width: 100% !important;
+    }
 }
 
